@@ -13,6 +13,7 @@ struct BootablePlugin: BuildToolPlugin {
                 displayName: "Inject event handler file.",
                 executable: Path("/bin/cp"),
                 arguments: [
+                    "-f",
                     "\(makefileURL.path)/Boot.swift",
                     "\(context.pluginWorkDirectory.string)/Boot.swift",
                 ],
